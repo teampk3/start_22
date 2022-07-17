@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content=" width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/main.css">
+<title>경기도에 놀러와</title>
+
+<script>
+  //== 검색 버튼 . search button event ======
+  function reload2(){
+    var code = document.userForm.local.value;
+    var searchStr = code +"+"+document.userForm.srch_word.value;
+    var target = document.getElementById("local");
+    var sg_name = target.options[target.selectedIndex].text;
+    //alert(searchStr);
+
+    if ( code != "" ) {
+      //-- weather ----------------------
+      document.iframe2.location.href="http://54.215.67.224:8080/weather/"+sg_name;
+      //-- rank -----------------------
+      //document.targetRank.location.href="http://54.215.67.224:3000/rank";
+
+      //-- map ----------------------
+      document.iframe.location.href="http://54.215.67.224:8080/map/"+ searchStr;
+
+      //-- 숙박정보
+      document.iframe1.location.href="http://54.215.67.224:3000/accom?sg_cd="+ code;
+
+      //-- 시티투어정보 ----------------------
+      document.iframe3.location.href="http://54.215.67.224:3000/citytourinfo?sg_cd="+ code;
+    } else{
+      alert("지역을 선택하세요");
+
+    }
+  }
+
+  //== 숙박/ 체험관광지 선택 -> 오른쪽 iframe ========
+  function reload3(div){
+    var code = document.userForm.local.value;
+    //alert(code);
+    if ( code != "" ) {
+      if ( div == 1 ) {
+        document.iframe1.location.href="http://54.215.67.224:3000/accom?sg_cd="+ code;
+      } else {
+        document.iframe1.location.href="http://54.215.67.224:3000/tourarea?sg_cd="+ code;
+      }
+    } else {
+      alert("검색할 지역을 선택해주세요");
+    }
+  }
+
+</script>
+
+</head>
+<body class="body" >
+<div class="main">
+  <div class="ctSearch">City Tour Search</div>
+
+  <form method="post" action='' name="userForm" >
+
+  <div class="ctSearch01" style="display: flex; align-items: center">
+    <!-- 검색 창 ------------------------------------->
+      <select title="지역" name="local" id="local">
+        <option value="">지역선택</option>
+        <option value="41820">가평군</option>
+        <option value="41210">광명시</option>
+        <option value="41270">안산시</option>
+        <option value="41670">여주시</option>
+        <option value="41480">파주시</option>
+      </select>
+      &nbsp;
+      <input type="text" name="srch_word" size='10'>  &nbsp;
+      <a href="#" onclick="javascript:reload2();"><img src="./img/search_button.png" width="25" height="25" alt=""/> </a>
+  </div>
+
+  </form>
+
+  <!--지도 iframe-->
+  <div class="mapbody"></div>
+  <div class="mapsicleMap">
+    <div >
+
+        <!--지도 iframe-->
+        <iframe name="iframe" id="iframe" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0" width="400px" cellpadding="0" cellspacing="0" height="350px" align="right" src="http://54.215.67.224:8080/map"></iframe>
+
+
+        <!--지도 끝 iframe-->
+
+    </div>
+  </div>
+
+  <!--숙박/관광지 선택  ------------------------------------->
+  <div class="bthotel">
+    <input type="image" src="./img/button_hotel.png"  onclick="reload3(1);">
+  </div>
+  <div class="btexp">
+    <input type="image" src="./img/ebutton.png"  onclick="reload3(2);">
+  </div>
+
+  <!--ifrme 숙박/체험 구현창-->
+
+  <div class="subinfo" style="display: flex; align-items: center; padding-left: 10px">
+    <div > </div>
+    <div >
+
+        <!--숙박/체험 iframe-->
+        <iframe name="iframe1" id="iframe1" scrolling="yes" border="no" maginwidth="0" marginheight="0" frameborder="0" cellpadding="0" cellspacing="0" height="80px" width="245px" align="center" src="blank.html"></iframe>
+
+
+        <!--숙박/체험 끝 iframe-->
+
+    </div>
+  </div>
+  <div class="logo" onclick="location.href='./index.html'">경기도에 놀러와</div>
+  <div class="besttourbg"></div>
+  <div class="besttoursubbg"></div>
+  <div class="besttourimg"><img src="./img/Shuttle bus1.png" width="54" height="55" alt=""/></div>
+  <div class="besttourtxt">인기시티투어</div>
+
+  <!--인기 시티투어 테이블 -->
+  <div class="tourtable">
+     <iframe name="iframe4" id="iframe4" src="http://54.215.67.224:3000/rank" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0" width="193px" height="243px" cellpadding="0" cellspacing="0"  align="right"></iframe>
+  </div>
+
+
+  <!--날씨-->
+  <div class="weatherbg"> </div>
+  <div class="weathertext">날씨</div>
+  <div class="weatherinfo" style="display: flex; align-items: center; padding-left: 10px">
+
+	   <!--날씨 iframe-->
+        <iframe name="iframe2" id="iframe2" src="http://54.215.67.224:8080/weather" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0" cellpadding="0" height="54px"  width="200px" align="right" ></iframe>
+
+        <!--날씨 끝 iframe-->
+
+  </div>
+
+  <!--map sub-->
+  <div class="mapsubbg"></div>
+  <div class="citytoursubm">시티투어</div>
+  <div class="citytoursubinfo" style="align-items: center;padding-left: 10px; padding-top: 30px">
+
+
+	   <!--시티투어 오른쪽 정보창 iframe-->
+        <iframe name="iframe3" id="iframe3" scrolling="yes" border="no" maginwidth="0" marginheight="0" frameborder="0"cellpadding="0" cellspacing="0" height="335px" width="200px"  align="center" src="blank.html"></iframe>
+
+      <!--시티투어 오른쪽 정보창 끝 iframe-->
+
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+@charset "utf-8";
+/* CSS Document */
+.body {
+
+  width: 100%;
+  background: #FFFFFF;
+
+
+}
+
+.td{
+	font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+
+
+
+}
+
+.main {
+
+  background-color: #FFFFFF;
+  width: 1050px;
+  height: 800px;
+}
+
+
+
+.logo {
+
+position: absolute;
+width: 208px;
+height: 117px;
+left: 55px;
+top: 51px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 50px;
+line-height: 61px;
+
+color: #7CB0FF;
+}
+
+
+/* besttourbg */
+
+
+.besttourbg{
+position: absolute;
+width: 371px;
+height: 369px;
+left: 0px;
+top: 431px;
+
+background: #7CB0FF;
+
+}
+
+/* besttoursubbg */
+
+.besttoursubbg{
+position: absolute;
+width: 230px;
+height: 369px;
+left: 141px;
+top: 431px;
+
+background: #0066FF;
+
+}
+
+.besttourimg{
+
+position: absolute;
+width: 53px;
+height: 55px;
+left: 145px;
+top: 383px;
+
+background: url(.png);
+
+
+}
+
+/* 인기시티투어 */
+
+.besttourtxt{
+position: absolute;
+width: 120.52px;
+height: 24px;
+left: 245px;
+top: 400px;
+
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+
+color: #0047FF;
+
+}
+
+.tourtable{
+
+position: absolute;
+width: 193px;
+height: 243px;
+left: 165.1px;
+top: 469px;
+
+
+
+}
+
+.ctSearch{
+position: absolute;
+width: 163px;
+height: 25px;
+left: 394px;
+top: 51px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+color: #DCECFF;
+z-index: 1;
+}
+
+.ctSearch01{
+position: absolute;
+width: 274px;
+height: 25px;
+left: 394px;
+top: 91px;
+z-index: 1;
+}
+
+.mapbody{
+position: absolute;
+width: 450px;
+height: 800px;
+left: 370px;
+top: 0px;
+
+background: #7CB0FF;
+}
+
+/* Mapsicle Map */
+
+
+.mapsicleMap{
+
+position: absolute;
+width: 400px;
+height: 350px;
+left: 394px;
+top: 168px;
+background: #ffff;
+z-index: 1;
+}
+
+.bthotel{
+position: absolute;
+width: 48px;
+height: 20px;
+left: 394px;
+top: 528px;
+z-index: 1;
+
+}
+
+/* 체험button */
+
+.btexp{
+position: absolute;
+width: 70px;
+height: 20px;
+z-index: 1;
+left: 450px;
+top: 528px;
+}
+
+/* 숙박체험 BG */
+.subinfo{
+
+position: absolute;
+width: 249px;
+height: 94px;
+left: 394px;
+top: 562px;
+background: #FFFFFF;
+border-radius: 5px;
+z-index: 1;
+
+}
+
+/* 날씨 BG */
+.weatherbg{
+position: absolute;
+width: 230px;
+height: 162px;
+left: 820px;
+top: 0px;
+
+background: #0F7DE3;
+
+}
+
+/* 날씨제목텍스 */
+
+.weathertext{
+position: absolute;
+width: 52px;
+height: 33px;
+left: 835px;
+top: 50px;
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 34px;
+color: #C6DCFF;
+
+}
+
+
+.weatherinfo{
+
+position: absolute;
+width: 204px;
+height: 53px;
+left: 828px;
+top: 99px;
+
+background: #0F7DE3;
+border-radius: 5px;
+z-index: 1;
+
+}
+
+
+/* mapsub_bg */
+
+.mapsubbg{
+position: absolute;
+width: 230px;
+height: 640px;
+left: 820px;
+top: 160px;
+
+background: #0066FF;
+}
+
+/* 시티투어코스 제목 */
+
+.citytoursubm{
+position: absolute;
+width: 140px;
+height: 22px;
+left: 834px;
+top: 190px;
+
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 34px;
+z-index: 1;
+color: #E4F4FF;
+
+	}
+/* 시티투어코스 서브내용  */
+
+
+
+.citytoursubinfo{
+
+position: absolute;
+width: 200Px;
+height:340px;
+left: 830px;
+top: 226px;
+z-index: 1;
+border-radius: 5px;
+background: #FFFFFF;
+
+
+
+}
+
+
+
+/*
+.toursub01{
+position: absolute;
+width: 205px;
+height: 219px;
+background: #FFFFFF;
+border-radius: 5px;
+color: #E4F4FF;
+	z-index: 1;
+	}
+*/

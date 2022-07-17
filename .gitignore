@@ -1,0 +1,11 @@
+config
+ftpconfig
+
+# node_modules 제외
+/*/node_modules
+
+node/config/*
+
+/*/conf.js
+/*/pool.js
+/*/config.ini
